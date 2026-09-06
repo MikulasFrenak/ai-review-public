@@ -37,10 +37,22 @@ This repository documents our evaluation of various AI coding agents, focusing o
 | **Kilo Code / RooCode / Zed** | Free (Zed has paid tier too) | Model-agnostic | RooCode often cited as strongest on large multi-file changes |
 | **LM Studio + Continue.dev** | Free | Fully local (GGUF/MLX models) | GUI-first alternative to Ollama for model management |
 
+### Local Models (Open-Weight) — updated September 2026
+
+New candidates worth knowing about since this table was first written:
+
+| Model | Type | Notes |
+|---|---|---|
+| **Kimi K3** (Moonshot AI) | 2.8T total / 104B active, MoE | New open-weight #1 by most rankings, but needs cluster-class hardware — not laptop-viable |
+| **Qwen3.8-27B** | 27B dense, multimodal | Apache 2.0, released Aug 14 2026 — fits comfortably on a single high-RAM Mac/GPU, a strong local daily-driver candidate |
+| **Devstral Small 24B** | 24B, agentic-tuned | Purpose-built for agentic multi-file workflows specifically, not just general coding |
+
+**Worth keeping in mind regardless of tool:** per Stack Overflow's 2026 Developer Survey, AI coding tool adoption is ~84% monthly, but developer trust in AI-generated code's accuracy dropped to 29% (from 40% the year before). Don't treat any single agent's output — local or cloud — as final without review.
+
 ## Our Setup
 
 This repository documents our current working setup:
-- **Local**: Cline (VS Code) → Ollama → `qwen3-coder:30b`
+- **Local**: Cline (VS Code) → Ollama → `qwen3-coder:30b`, with **Qwen3.8-27B under evaluation as a potential upgrade** (see table above)
 - **Escalation path if quality ceiling hit**: Claude Code or Cursor Pro ($20/mo) for heavy multi-file / architecture-level tasks, keep Cline local for routine work
 
 ## Review Sharing
